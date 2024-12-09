@@ -1,0 +1,152 @@
+/* General Body Style */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-image: url('images/soccer-background.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation Bar */
+  nav ul {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+    color: #f0c040; /* Gold accent on hover */
+  }
+  
+  /* Content Section Styling */
+  .content-section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent overlay */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Section Titles */
+  h1, h2 {
+    text-align: center;
+    color: #f0c040; /* Gold accent color */
+  }
+  
+  /* Unordered and Ordered Lists */
+  ol, ul {
+    margin: 10px 0;
+    padding: 0 20px;
+  }
+  
+  li {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  
+  /* Image Styling */
+  .center-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 3px solid #f0c040; /* Gold border */
+    border-radius: 10px;
+  }
+  
+  /* Video Section */
+  iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Trivia Section */
+  #trivia-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 0, 0, 0.8); /* Red background */
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #f0c040; /* Gold button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c0a030; /* Darker gold on hover */
+  }
+  
+  /* Tableau Section */
+  #tableau-section iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+  
+  /* Footer Section (if needed) */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 0.9em;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    .content-section {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    iframe {
+      height: 250px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  

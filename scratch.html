@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer Scratch Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#favorite-players">Favorite Players</a></li>
+      <li><a href="#video-section">Highlight Video</a></li>
+      <li><a href="#tableau-section">Soccer Stats</a></li>
+      <li><a href="#game-section">Trivia Game</a></li>
+    </ul>
+  </nav>
+
+  <!-- Introduction -->
+  <div id="intro" class="content-section">
+    <h1>Welcome to My Soccer Scratch Page</h1>
+    <p>This page is all about my love for soccer, featuring my favorite players, videos, stats, and a fun trivia game!</p>
+  </div>
+
+  <!-- Favorite Players Section -->
+  <div id="favorite-players" class="content-section">
+    <h2>My Favorite Soccer Players</h2>
+    <ol>
+      <li>Messi
+        <ul>
+          <li>Country: Argentina</li>
+          <li>Clubs: Barcelona, PSG, Inter Miami</li>
+        </ul>
+      </li>
+      <li>Ronaldo
+        <ul>
+          <li>Country: Portugal</li>
+          <li>Clubs: Manchester United, Real Madrid, Juventus, Al Nassr</li>
+        </ul>
+      </li>
+      <li>Neymar
+        <ul>
+          <li>Country: Brazil</li>
+          <li>Clubs: Barcelona, PSG, Al-Hilal</li>
+        </ul>
+      </li>
+    </ol>
+    <img src="https://jooinn.com/images/soccer-field-2.png" alt="Soccer Field" class="center-image">
+  </div>
+
+  <!-- Video Section -->
+  <div id="video-section" class="content-section">
+    <h2>Must-See Soccer Highlight</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XKAV4qRIvJ8?start=6" 
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Tableau Section -->
+  <div id="tableau-section" class="content-section">
+    <h2>Interactive Soccer Data</h2>
+    <iframe src="https://public.tableau.com/views/your_graph_link" width="100%" height="500"></iframe>
+  </div>
+
+  <!-- Trivia Game -->
+  <div id="game-section" class="content-section">
+    <h2>Soccer Trivia Game</h2>
+    <button onclick="startTrivia()">Start Trivia</button>
+    <div id="trivia-container"></div>
+  </div>
+
+  <!-- Script for Trivia Game -->
+  <script>
+    function startTrivia() {
+      const questions = [
+        { question: "Which country has won the most World Cups?", answer: "Brazil" },
+        { question: "Who won the Ballon d'Or in 2023?", answer: "Messi" },
+        { question: "Which country hosted the 2018 FIFA World Cup?", answer: "Russia" }
+      ];
+      let index = 0;
+
+      function askQuestion() {
+        if (index < questions.length) {
+          const userAnswer = prompt(questions[index].question);
+          if (userAnswer.toLowerCase() === questions[index].answer.toLowerCase()) {
+            alert("Correct!");
+          } else {
+            alert(`Wrong! The correct answer is ${questions[index].answer}`);
+          }
+          index++;
+          askQuestion();
+        } else {
+          alert("Trivia Complete!");
+        }
+      }
+      askQuestion();
+    }
+  </script>
+</body>
+</html>
